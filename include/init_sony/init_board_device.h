@@ -47,31 +47,31 @@ public:
             vibrate(50);
 
             // LEDs boot selection animation
-            led_brightness(0, 255, 0);
-            led_color(0, 16, 0);
+            led_brightness(0, 0, 255);
+            led_color(0, 0, 16);
             msleep(50);
-            led_color(0, 32, 0);
+            led_color(0, 0, 32);
             msleep(50);
-            led_color(0, 64, 0);
+            led_color(0, 0, 64);
             msleep(50);
-            led_color(0, 92, 0);
+            led_color(0, 0, 92);
             msleep(1500);
-            led_color(0, 64, 0);
+            led_color(0, 0, 64);
             msleep(50);
-            led_color(0, 32, 0);
+            led_color(0, 0, 32);
             msleep(50);
-            led_brightness(255, 0, 0);
-            led_color(16, 0, 0);
+            led_brightness(255, 255, 0);
+            led_color(16, 16, 0);
             msleep(50);
-            led_color(32, 0, 0);
+            led_color(32, 32, 0);
             msleep(50);
-            led_color(64, 0, 0);
+            led_color(64, 64, 0);
             msleep(50);
-            led_color(92, 0, 0);
+            led_color(92, 92, 0);
             msleep(1000);
-            led_color(64, 0, 0);
+            led_color(64, 64, 0);
             msleep(50);
-            led_color(32, 0, 0);
+            led_color(32, 32, 0);
             msleep(50);
             led_color(0, 0, 0);
             led_brightness(0, 0, 0);
@@ -96,25 +96,6 @@ public:
     virtual void introduce_android()
     {
         // LEDs Android animation
-        led_brightness(0, 255, 0);
-        led_color(0, 32, 0);
-        msleep(50);
-        led_color(0, 64, 0);
-        msleep(50);
-        led_color(0, 128, 0);
-        msleep(1000);
-        led_color(0, 64, 0);
-        msleep(50);
-        led_color(0, 32, 0);
-        msleep(50);
-        led_color(0, 0, 0);
-        led_brightness(0, 0, 0);
-    }
-
-    // Board: introduction for Recovery
-    virtual void introduce_recovery()
-    {
-        // LEDs Recovery animation
         led_brightness(0, 0, 255);
         led_color(0, 0, 32);
         msleep(50);
@@ -125,6 +106,25 @@ public:
         led_color(0, 0, 64);
         msleep(50);
         led_color(0, 0, 32);
+        msleep(50);
+        led_color(0, 0, 0);
+        led_brightness(0, 0, 0);
+    }
+
+    // Board: introduction for Recovery
+    virtual void introduce_recovery()
+    {
+        // LEDs Recovery animation
+        led_brightness(255, 0, 0);
+        led_color(32, 0, 0);
+        msleep(50);
+        led_color(64, 0, 0);
+        msleep(50);
+        led_color(128, 0, 0);
+        msleep(1000);
+        led_color(64, 0, 0);
+        msleep(50);
+        led_color(32, 0, 0);
         msleep(50);
         led_color(0, 0, 0);
         led_brightness(0, 0, 0);
